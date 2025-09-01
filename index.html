@@ -26,60 +26,45 @@ nav.navbar {
 nav.navbar.scrolled {
   background: #111 !important;
 }
-
-/* Hero Section */
 #hero {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero-video-wrapper {
+
+#hero-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-.hero-video {
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
   pointer-events: none;
 }
-.hero-text-bg {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark background */
-  padding: 15px 0; /* vertical padding */
-  width: 100%;      /* full width horizontally */
-  text-align: center; 
-}
-.hero-text-bg h1, .hero-text-bg p {
-  margin: 0;
-  padding: 0 20px; /* horizontal padding inside the box */
-}
+
 .hero-overlay {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   color: white;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  width: 100%;
   padding: 0 20px;
+  background: rgba(0,0,0,0.5);
 }
-}
-.hero-overlay h1 {
-  font-size: 4rem;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 20px;
-}
-.hero-overlay p {
-  font-size: 1.5rem;
+
+@media (max-width: 768px) {
+  .hero-video-wrapper {
+    width: 177.77vw; /* ensures video fills width on mobile */
+    height: 56.25vw;  /* 16:9 aspect ratio */
+  }
+  #hero h1 { font-size: 2.5rem; }
+  #hero p { font-size: 1.2rem; }
 }
 
 /* About Section */
@@ -191,22 +176,22 @@ footer a:hover {
   </div>
 </nav>
 
-<!-- Hero Section -->
 <section id="hero">
-  <div class="hero-video-wrapper">
-    <iframe class="hero-video"
-      src="https://www.youtube.com/embed/QRwbY8UWR2g?autoplay=1&mute=1&controls=0&loop=1&playlist=QRwbY8UWR2g"
-      title="Loop Video For Website"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      allowfullscreen></iframe>
-  </div>
-<div class="hero-overlay text-center">
-  <div class="hero-text-bg" data-aos="fade-up">
+  <video autoplay muted loop playsinline id="hero-video">
+    <source src="videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay text-center">
     <h1>San Win</h1>
     <p>Creative Director | Storyteller | MBA Candidate in Bangkok</p>
   </div>
-</div>
+</section>
+
+  <div class="hero-overlay text-center">
+    <h1 data-aos="fade-up">San Win</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Creative Director | Storyteller | MBA Candidate in Bangkok</p>
+  </div>
 </section>
 
 <!-- About Section -->
