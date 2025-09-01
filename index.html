@@ -26,6 +26,8 @@ nav.navbar {
 nav.navbar.scrolled {
   background: #111 !important;
 }
+
+/* Hero Section */
 #hero {
   position: relative;
   width: 100%;
@@ -59,32 +61,10 @@ nav.navbar.scrolled {
 }
 
 @media (max-width: 768px) {
-  .hero-video-wrapper {
-    width: 177.77vw; /* ensures video fills width on mobile */
-    height: 56.25vw;  /* 16:9 aspect ratio */
-  }
   #hero h1 { font-size: 2.5rem; }
   #hero p { font-size: 1.2rem; }
 }
-  
-<section id="hero">
-  <video autoplay muted loop playsinline id="hero-video">
-    <source src="videos/background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="hero-overlay text-center">
-    <h1>San Win</h1>
-    <p>Creative Director | Storyteller | MBA Candidate in Bangkok</p>
-  </div>
-</section>
-
-  <div class="hero-overlay text-center">
-    <h1 data-aos="fade-up">San Win</h1>
-    <p data-aos="fade-up" data-aos-delay="200">Creative Director | Storyteller | MBA Candidate in Bangkok</p>
-  </div>
-</section>
-  
 /* About Section */
 #about {
   padding: 80px 20px;
@@ -193,7 +173,20 @@ footer a:hover {
     </div>
   </div>
 </nav>
-  
+
+<!-- Hero Section -->
+<section id="hero">
+  <video autoplay muted loop playsinline id="hero-video">
+    <source src="videos/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-overlay text-center">
+    <h1 data-aos="fade-up">San Win</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Creative Director | Storyteller | MBA Candidate in Bangkok</p>
+  </div>
+</section>
+
 <!-- About Section -->
 <section id="about" class="container">
   <div class="row align-items-center">
@@ -217,7 +210,7 @@ footer a:hover {
     </div>
   </div>
 </section>
-
+  
 <!-- Portfolio Section -->
 <section id="portfolio">
   <div class="portfolio-container">
